@@ -20,7 +20,7 @@ document.body.appendChild( renderer.domElement )
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50),
     new THREE.MeshBasicMaterial( { 
         //color: 0x0000FF 
-        map: new THREE.TextureLoader().load('UVMaps/project_1024_15am_try2.jpeg'),
+        map: new THREE.TextureLoader().load('./project_1024_15am_try2.jpeg'),
         // side: THREE.BackSide
     } ))
 
