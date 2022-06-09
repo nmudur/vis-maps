@@ -15,12 +15,12 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(innerWidth, innerHeight )
 renderer.setPixelRatio(window.devicePixelRatio)
-document.body.appendChild( renderer.domElement )
+// doc body
 
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50),
     new THREE.MeshBasicMaterial( { 
         //color: 0x0000FF 
-        map: new THREE.TextureLoader().load('./project_1024_15am_try2.jpeg', renderer.render(scene, camera)),
+        map: new THREE.TextureLoader().load('./project_1024_15am_try2.jpeg'),
         // side: THREE.BackSide
     } ))
 
@@ -28,6 +28,8 @@ console.log(sphere)
 scene.add(sphere)
 camera.position.z = 20
 renderer.render(scene, camera)
+document.body.appendChild( renderer.domElement )
+
 const group = new THREE.Group()
 group.add(sphere)
 scene.add(group)
