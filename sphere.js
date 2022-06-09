@@ -15,7 +15,8 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(innerWidth, innerHeight )
 renderer.setPixelRatio(window.devicePixelRatio)
-// doc body
+document.body.appendChild( renderer.domElement )
+
 
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50),
     new THREE.MeshBasicMaterial( { 
@@ -27,7 +28,6 @@ const sphere = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50),
 console.log(sphere)
 scene.add(sphere)
 camera.position.z = 20
-document.body.appendChild( renderer.domElement )
 
 const group = new THREE.Group()
 group.add(sphere)
