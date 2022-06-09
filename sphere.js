@@ -27,7 +27,6 @@ const sphere = new THREE.Mesh(new THREE.SphereGeometry(5, 50, 50),
 console.log(sphere)
 scene.add(sphere)
 camera.position.z = 20
-renderer.render(scene, camera)
 document.body.appendChild( renderer.domElement )
 
 const group = new THREE.Group()
